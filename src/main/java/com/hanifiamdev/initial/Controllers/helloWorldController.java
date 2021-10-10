@@ -1,5 +1,6 @@
 package com.hanifiamdev.initial.Controllers;
 
+import com.hanifiamdev.initial.Entity.Username;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -18,5 +19,10 @@ public class helloWorldController {
     @PostMapping("/Helloworld")
     public String HelloworldPostController(@RequestParam(name = "Username") String username) {
         return "hello " + username;
+    }
+
+    @PostMapping("/HelloworldUser")
+    public Username HelloWordUserPostController(@RequestBody Username username) {
+        return username;
     }
 }
