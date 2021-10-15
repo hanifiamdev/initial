@@ -2,9 +2,10 @@ package com.hanifiamdev.initial.Entity;
 
 
 import javax.validation.constraints.Email;
+import javax.validation.constraints.Size;
 
 public class Username {
-
+    @Size(min=3, max=50, message = "name between 3-50 characters")
     private String Name;
     private String Address;
 
