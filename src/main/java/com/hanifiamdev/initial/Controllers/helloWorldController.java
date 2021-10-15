@@ -3,6 +3,8 @@ package com.hanifiamdev.initial.Controllers;
 import com.hanifiamdev.initial.Entity.Username;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+
 @RestController
 public class helloWorldController {
 
@@ -22,7 +24,7 @@ public class helloWorldController {
     }
 
     @PostMapping("/HelloworldUser")
-    public Username HelloWordUserPostController(@RequestBody Username username) {
+    public Username HelloWordUserPostController(@Valid @RequestBody Username username) {
         return username;
     }
 }
